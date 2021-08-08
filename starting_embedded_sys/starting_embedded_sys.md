@@ -38,3 +38,13 @@ This is where you start to get your hands dirty. I would like to state categoric
 * **Measurement and Test Equipment:** Measurement and test equipment helps Engineers make informed decisions and so are essential to successful design implementation. Learn how to use tools like Logic analyzers, Multimeters, Oscilloscope, etc.
 
 * **Debugging:** There is no one size fits all when it comes to debugging. The design you are working on determines the debugging approach to be used. But two things remain constant. **PERSEVERANCE AND PATIENCE**. These two attributes will really help you in your journey.
+
+On a final note, practice is important. To be able to be referred to as an expert in the embedded domain, it takes years. So keep practicing and also documenting your work. Also, networking is important. Use Linkedin as a means to reach out to professionals in the field. Follow hardware communities such as [hackster](https://www.hackster.io/), [adafruit](https://www.adafruit.com/),[hackaday](https://hackaday.com/) and [Jacob Beningo's website](https://www.beningo.com/).
+
+PS: For more information check out these resources
+
+PCB Design: [Pallav aggarwal](https://pallavaggarwal.in/essentials-to-be-a-good-pcb-design-engineer/), [Phil's Lab](https://www.youtube.com/watch?v=C7-8nUU6e3E&t=14s) and [Contextual Electronics](https://www.youtube.com/playlist?list=PL5mVUDlcMUbNvmHRq8r4y7kh6n_lsUsz4)
+
+Microntrollers: [Pallav aggarwal](https://pallavaggarwal.in/how-to-learn-about-microcontrollers/)
+
+Kindly leave a comment if you have any questions. Thanks for reading.
