@@ -1,1 +1,1 @@
-# Techical-Article
+# Technical-Article
