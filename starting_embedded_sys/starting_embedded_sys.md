@@ -13,5 +13,10 @@ In order to provide a clear path to learn this interesting and ever dynamic fiel
 
 ## Embedded Software
 
-* Learn C: About 95% of embedded systems applications are written in C. Understanding it will help you a lot in your Embedded systems journey. There are other programming languages (such as C++, Assembly, and Rust) that you must add to your arsenal as you progress. But for starters, C should come first. I recommend the book[Learn C the hard way by Zed Shaw](https://https://www.amazon.com/Learn-Hard-Way-Practical-Computational/dp/0321884922).
+* Learn C: About 95% of embedded systems applications are written in C. Understanding it will help you a lot in your Embedded systems journey. There are other programming languages (such as C++, Assembly, and Rust) that you must add to your arsenal as you progress. But for starters, C should come first. I recommend the book [Learn C the hard way by Zed Shaw](https://www.amazon.com/Learn-Hard-Way-Practical-Computational/dp/0321884922).
 
+* Real-Time Operating System(RTOS): When an Embedded application makes use of various communication interfaces, has more interrupt sources, and uses more functions, it is usually imperative to make use of RTOS has it helps to effectively manage resources. I usually recommend FreeRTOS as it is free and most commonly used.
+
+* Learn Embedded Linux: For learning Embedded Linux, I will recommend [Yocto](https://www.yoctoproject.org). This is because Yocto helps you to build an Embedded Linux application that is not hardware architecture agnostic. Yocto makes use of [Openembedded](https://www.openembedded.org/wiki/Main_Page) as it's build system.
+
+One thing I want to make clear is that it's not a rule of thumb to learn all the three components of embedded software mentioned above first before venturing into the hardware part. A clear understanding of C is good enough to get you started.
