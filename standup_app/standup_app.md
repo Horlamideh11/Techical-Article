@@ -119,4 +119,29 @@ Appsmith allows you to link data from several databases. For this tutorial, you�
 * Click Test so that Appsmith can verify everything is correct, then click Save.
 * Back in Firestore, click Start Collection to create a collection, or database table. Set the Collection ID to User and add fields for name and email, both as string type. Sample user values will work for each, eg Chris for the name value and chris@email.com for the email.
 
-![page 11](https://i.imgur.com/MdhNn2g.png)
+![page 11](https://i.imgur.com/1DAZzCj.png)
+
+* To add a collection named StandUps, add fields for date (in seconds), today's to-dos, yesterday's to-dos, completed, and blocker in Firestore.
+Note that since you’re building an internal app, you can create more users and standups in their respective collections.
+
+## Creating Standup Queries
+
+Mustache syntax ({{...}}) allows you to write JavaScript in Appsmith to read data from elements defined on a particular page. Let’s take advantage of this to pull information from queries or other widgets. First, let’s create the queries:
+
+1. Click the + icon on the DB Queries menu. You should see your database as an option.
+1. Click New query on the top right corner of your database option.
+1. Rename it to createStandUp.
+1. In the **Method** dropdown of the **createStandUp** window, select **Add Document to Collection.**
+1. Set the database to the name of your database in Firestore. Fill in the body with the following code:
+
+```javascript
+{
+    "yesterday": "{{Input3.value}}",
+    "user": "{{Input2.value}}",
+    "blocker": "{{Input5.value}}",
+    "todos": "{{Input4.value}}",
+    "prev_completed": "{{Dropdown2.value}}"
+    "date": {{Date.now()}}
+}
+```
+
