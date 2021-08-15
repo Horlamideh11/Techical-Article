@@ -110,3 +110,13 @@ Appsmith allows you to link data from several databases. For this tutorial, youâ
 * Create a Firestore database to get the project ID.
 * From your Firebase console, click the Settings gear on the sidebar.
 * Copy your project ID and paste it into Appsmith. Your database URL is https://_your-project-id_.firebaseio.com.
+
+![page 10](https://i.imgur.com/MdhNn2g.png)
+
+* Back in your Firebase console, click the Service accounts tab.
+* Click Create service account. The JSON file containing your service account's credentials will download.
+* Copy the contents of the file and paste it into the Service Account Credentials field.
+* Click Test so that Appsmith can verify everything is correct, then click Save.
+* Back in Firestore, click Start Collection to create a collection, or database table. Set the Collection ID to User and add fields for name and email, both as string type. Sample user values will work for each, eg Chris for the name value and chris@email.com for the email.
+
+![page 11](https://i.imgur.com/MdhNn2g.png)
