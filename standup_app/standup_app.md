@@ -96,3 +96,17 @@ To finalize your first page’s UI, let’s add a table to display the users who
 * Finally, add a field to confirm if yesterday’s to-do is complete. Drag over a text widget and a dropdown widget with the values Yes or No.
 
 ![page 8](https://i.imgur.com/PdjNbmq.png)
+
+## Connecting Your Database
+
+Appsmith allows you to link data from several databases. For this tutorial, you’ll make use of [Firestore.](https://firebase.google.com/products/firestore)
+
+* In Appsmith, click Second Page on the sidebar, then click the + icon beside DB Queries.
+* Select Add a new data source.
+* Select Firestore.
+
+![page 9](https://i.imgur.com/R2npJtR.png)
+
+* Create a Firestore database to get the project ID.
+* From your Firebase console, click the Settings gear on the sidebar.
+* Copy your project ID and paste it into Appsmith. Your database URL is https://_your-project-id_.firebaseio.com.
