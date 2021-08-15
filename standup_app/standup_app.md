@@ -145,3 +145,66 @@ Mustache syntax ({{...}}) allows you to write JavaScript in Appsmith to read dat
 }
 ```
 
+Note that widgets in Appsmith are global objects, so you can access their values simply by calling _widget_name.value._
+
+![page 12](https://i.imgur.com/KAJOPLA.png)
+
+Continue to round out your app’s queries:
+
+* For fetchUsers, set the following properties:
+  * Method: Get Documents in Collection
+    * Document/Collection Path: users
+![page 13](https://i.imgur.com/9A8e68V.png)
+
+* For fetchStandUps, set the following properties:
+  * Method: Get Documents in Collection
+  * Document/Collection Path: standUps
+  * Order By: ["date"]
+
+![page 14](https://i.imgur.com/9v87a5g.png)
+
+* For updateStandUps, set the following properties:
+  * Method: Update Document
+  * Document/Collection Path: standUps/{{Table1.selectedRow._ref.id}}
+  * Body: paste in the following JSON
+
+```javascript
+{
+    "yesterday": "{{Input3.value}}",
+    "user": "{{Dropdown3.value}}",
+    "blocker": "{{Dropdown4.value}}",
+    "todos": "{{Input4.value}}",
+    "prev_completed": "{{Dropdown2.value}}"
+}
+```
+
+![page 15](https://i.imgur.com/kmMmhRb.png)
+
+Note that queries can only be referenced on the page where they’re defined. If you need the same query on another page, you need to copy and rename it on the other page.
+
+## Connecting Widgets to Queries
+
+Now let’s connect these queries to the widgets in your Appsmith app.
+
+* On the **First Page** of your Appsmith app, replace the text in the widget next to **Last Standup** todo with:
+
+```javascript
+{{fetchUserStandUps.data[0].todos}}
+
+```
+
+* For the **User** and **Blockers** dropdowns, replace the options with this:
+
+```javascript
+{{fetchUsers.data.map((e,i) => {return {label: e.name, value: e.name}}) }}
+```
+
+* For the **Yesterday completed** dropdown, replace its options with this:
+
+```javascript
+[{"label": "Yes", "value": "true" }, { "label": "No", "value": "false" }]
+```
+
+* To configure the First Page’s Submit button, select **Execute DB query** under **onClick**, then select the **createStandUp** query.
+
+![page 16](https://i.imgur.com/I3BPTuM.png)
